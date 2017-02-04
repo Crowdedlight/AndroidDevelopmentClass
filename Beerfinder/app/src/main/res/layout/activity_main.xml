@@ -44,9 +44,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewResults"
-        android:layout_alignLeft="@+id/buttonFindBeer"
-        android:layout_below="@+id/buttonFindBeer"
         android:layout_marginTop="18dp"
-        android:text="@string/brands"
-        />
+        android:text=""
+        android:layout_below="@+id/buttonFindBeer"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDescriptions"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:text=""
+        android:layout_below="@+id/textViewResults"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:drawable/screen_background_dark_transparent"
+        android:elevation="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
 </RelativeLayout>

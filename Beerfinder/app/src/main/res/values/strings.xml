@@ -2,11 +2,17 @@
     <string name="app_name">Beerfinder</string>
     <string name="welcomeMessage">Find Beers</string>
     <string name="find_beer">Find Beer</string>
-    <string name="brands"></string>
+    <string name="type"></string>
     <string-array name="beer_colors">
         <item>light</item>
         <item>amber</item>
         <item>brown</item>
         <item>dark</item>
+    </string-array>
+    <string-array name="beer_descriptions">
+        <item>A light and tasteful beer that is shimmering with emotions of lush flowers.</item>
+        <item>Medium body, less malty with noticable caramel/crystal malt flavor.</item>
+        <item>Brown ales from northeastern England tend to be strong and malty, often nutty, while those from southern England are usually darker, sweeter and lower in alcohol. North American brown ales are usually drier than their English counterparts, with a slight citrus accent and an aroma, bitterness, and medium body due to American hop varieties.</item>
+        <item>Darkest of the dark with a taste of all life have to offer</item>
     </string-array>
 </resources>
