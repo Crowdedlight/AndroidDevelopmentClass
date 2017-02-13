@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MessengerApp</string>
+    <string name="send_an_message"><u>Send an Message</u></string>
+    <string name="a_little_message">A Little Message</string>
+    <string name="ok">OK</string>
+    <string name="snackbar_msg_recieved">Msg has been read</string>
+</resources>

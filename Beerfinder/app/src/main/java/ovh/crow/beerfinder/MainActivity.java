@@ -29,12 +29,12 @@ public class MainActivity extends Activity {
         BeerType beerType = expert.getBrands(color, this);
 
         StringBuilder brandsFormatted = new StringBuilder();
-        for(String brand : beerType.brands) {
+        for(String brand : beerType.getBrands()) {
             brandsFormatted.append(brand).append("\n");
         }
         //display
         brands.setText(brandsFormatted);
-        description.setText(beerType.description);
+        description.setText(beerType.getDescription());
         description.setVisibility(View.VISIBLE);
     }
 }

@@ -8,9 +8,21 @@ import java.util.List;
  */
 
 public class BeerType {
-    public List<String> brands;
-    public String name;
-    public String description;
+    private List<String> brands;
+    private String name;
+    private String description;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<String> getBrands() {
+        return brands;
+    }
 
     public BeerType(String name, String description)
     {
