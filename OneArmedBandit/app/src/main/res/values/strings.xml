@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OneArmedBandit</string>
+    <string name="btnStop">STOP</string>
+    <string name="btnStart">START</string>
+    <string name="current_bet">Current Bet:</string>
+    <string name="bet">BET</string>
+    <string name="clear">CLEAR</string>
+</resources>

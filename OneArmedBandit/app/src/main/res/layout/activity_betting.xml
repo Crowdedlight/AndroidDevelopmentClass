@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_betting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/euro10small"
+        android:id="@+id/euro10"
+        android:onClick="AddBetAmount"
+        android:layout_alignTop="@+id/euro5"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/euro20small"
+        android:id="@+id/euro20"
+        android:onClick="AddBetAmount"
+        android:layout_below="@+id/euro10"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/euro5small"
+        android:layout_marginTop="14dp"
+        android:id="@+id/euro5"
+        android:onClick="AddBetAmount"
+        android:layout_below="@+id/euro2"
+        android:layout_toStartOf="@+id/euro10" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/euromoent1"
+        android:layout_marginTop="21dp"
+        android:id="@+id/euro1"
+        android:onClick="AddBetAmount"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/euro10"
+        android:layout_marginEnd="33dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/euromoent2"
+        android:id="@+id/euro2"
+        android:layout_alignTop="@+id/euro1"
+        android:layout_toEndOf="@+id/euro5"
+        android:onClick="AddBetAmount"
+        android:layout_marginStart="27dp" />
+
+    <Button
+        android:text="@string/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/euro20"
+        android:layout_alignStart="@+id/euro5"
+        android:background="@drawable/roundcornerred"
+        android:textColor="@android:color/background_light"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="29dp"
+        android:onClick="clear"
+        android:id="@+id/btnClear" />
+
+    <TextView
+        android:text="@string/current_bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/btnBet"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCurrBet"
+        android:layout_alignBaseline="@+id/btnBet"
+        android:layout_alignBottom="@+id/btnBet"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBet"
+        android:textColor="@android:color/background_light"
+        android:background="@drawable/roundcornergreen"
+        android:layout_alignBaseline="@+id/btnClear"
+        android:layout_alignBottom="@+id/btnClear"
+        android:layout_alignParentEnd="true"
+        android:onClick="bet"
+        android:layout_marginEnd="19dp" />
+</RelativeLayout>
