@@ -5,4 +5,7 @@
     <string name="current_bet">Current Bet:</string>
     <string name="bet">BET</string>
     <string name="clear">CLEAR</string>
+    <string name="threeEqual">JACKPOT: %1$d €</string>
+    <string name="twoEquals">%1$d and %2$d are equal: %3$d €</string>
+    <string name="nonEqual">You are a LOSER!</string>
 </resources>

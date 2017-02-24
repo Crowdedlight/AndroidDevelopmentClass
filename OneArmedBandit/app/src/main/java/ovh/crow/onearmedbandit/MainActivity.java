@@ -1,5 +1,6 @@
 package ovh.crow.onearmedbandit;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -133,14 +135,33 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        //if 3 equals == big win, if 2 equals == half win
+        //if 3 equals == big win, if 2 equals == half win // Split 2 equals into 3 ifs instead of having in same if, to see which two is equal
+        String msg = "";
         if (framePos1 == framePos2 && framePos1 == framePos3) {
-            Log.d("winCheck", "3 equals");
-        } else if (framePos1 == framePos2 || framePos1 == framePos3 || framePos2 == framePos3) {
-            Log.d("winCheck", "2 equals");
+            //3 equals = 50 * bet
+            msg = String.format(getResources().getString(R.string.threeEqual), 50 * betAmount);
+        } else if (framePos1 == framePos2) {
+            //2 equals = 5 * bet
+            msg = String.format(getResources().getString(R.string.twoEquals), 1, 2, 5 * betAmount);
+        } else if (framePos1 == framePos3) {
+            //2 equals = 5 * bet
+            msg = String.format(getResources().getString(R.string.twoEquals), 1, 3, 5 * betAmount);
+        } else if (framePos2 == framePos3) {
+            //2 equals = 5 * bet
+            msg = String.format(getResources().getString(R.string.twoEquals), 2, 3, 5 * betAmount);
         } else {
-            Log.d("winCheck", "0 equals");
+            //no win
+            msg = String.format(getResources().getString(R.string.nonEqual));
         }
+
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_LONG;
+
+        Toast toast = Toast.makeText(context, msg, duration);
+        toast.show();
+
+        //reset bet amount
+        betAmount = 0;
 
         //enable start button for next round
         btnStart.setEnabled(true);
